@@ -1,0 +1,51 @@
+
+
+<div class="hero-wrap js-fullheight" style="background-image: url('{{ 'bg_1.jpg' | asset_url }}');">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+          <h3 class="v">CLARE - Time to get dressed</h3>
+          <h3 class="vr">Since - 1985</h3>
+        <div class="col-md-11 ftco-animate text-center">
+          <h1  >{{ section.settings.hero-title}}</h1>
+          <h2><span>{{ section.settings.hero-subtitle}}</span></h2>
+        </div>
+        <div class="mouse">
+                      <a href="#" class="mouse-icon">
+                          <div class="mouse-wheel"><span class="ion-ios-arrow-down"></span></div>
+                      </a>
+                  </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="goto-here"></div>
+
+  {% schema %}
+  {
+   "name": "hero",
+   "settings": [
+    {
+     "type": "text",
+     "id": "hero-title",
+      "label": "Hero Title",
+     "default": "<p>LE STYLIST</p>",
+    "info": "Hero title here"
+    },
+    {
+     "type": "text",
+     "id": "hero-subtitle",
+      "label": "Hero Subtitle",
+     "default": "Wear Your Dress",
+    "info": " Hero subtitle here"
+    }
+     
+   ],
+  "presets": [
+    {
+      "name": "Hero"
+      
+    }
+  ]
+  }
+  {% endschema %}
