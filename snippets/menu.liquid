@@ -10,18 +10,17 @@
             </li>
           {% else %}
             <li class="nav-item dropdown {% for childlink in link.links %}{% if childlink.active %}active{% endif %}{% endfor %}">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown04}">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04-{{ forloop.index0 }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown04-{{ forloop.index0 }}">
                 {% for childlink in link.links %}
-                  {% if childlink.title contains "--divider" %}
-                    <hr class="dropdown-divider"></hr>
-                  {% elsif childlink.title contains '--header' %}
-                    <h6 class="dropdown-header">{{ childlink.title | remove: "--header" }}</h6>
-                  {% else %}
+<!--                   
+                   
+                 
+                  
                     <li>
                       <a class="dropdown-item {% if childlink.active %}active{% endif %}" href="{{ childlink.url }}" aria-current="{% if childlink.active %}page{% endif %}">{{ childlink.title }}</a>
                     </li>
-                  {% endif %}
+                  
                 {% endfor %}
               </ul>
             </li>
