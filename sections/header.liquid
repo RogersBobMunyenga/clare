@@ -47,6 +47,22 @@
 <!--         <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li> -->
         {% endfor %}
       </ul>
+       <li class="nav-item cta cta-colored {% if  cart.item_count > 0 %}active{% endif %}">
+          <a
+            id="cart-icon"
+            class="
+              nav-link
+              
+            "
+            href="{{ routes.cart_url }}"
+          >
+            {% include 'icon-cart', width: 20, height: 20 %}
+            <span class="sr-only">{{ 'header.cart.title' | t }}</span>
+            <span class="ml-2">
+              (<span id="cart-icon-count">{{ cart.item_count }}</span>)
+            </span>
+          </a>
+        </li>
       
     </div>
     
