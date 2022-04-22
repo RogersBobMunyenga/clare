@@ -1,5 +1,74 @@
 {
   "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo_height": "30",
+          "link_list": "footer"
+        }
+      },
+      "hero": {
+        "type": "hero",
+        "settings": {
+          "hero-title": "<p>LE STYLIST<\/p>",
+          "hero-subtitle": "Wear Your Dress"
+        }
+      },
+      "featured-collection": {
+        "type": "featured-collection",
+        "settings": {
+        }
+      },
+      "image-with-text": {
+        "type": "image-with-text",
+        "settings": {
+        }
+      },
+      "collection": {
+        "type": "collection",
+        "settings": {
+        }
+      },
+      "season-sale": {
+        "type": "season-sale",
+        "settings": {
+        }
+      },
+      "testimonial": {
+        "type": "testimonial",
+        "settings": {
+        }
+      },
+      "blog": {
+        "type": "blog",
+        "settings": {
+        }
+      },
+      "awards": {
+        "type": "awards",
+        "settings": {
+        }
+      },
+      "services": {
+        "type": "services",
+        "settings": {
+        }
+      },
+      "newsletter": {
+        "type": "newsletter",
+        "settings": {
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
   }
