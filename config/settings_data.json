@@ -5,7 +5,7 @@
         "type": "header",
         "settings": {
           "logo_height": "30",
-          "link_list": "footer"
+          "link_list": "main-menu"
         }
       },
       "hero": {
