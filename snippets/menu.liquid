@@ -4,29 +4,17 @@
       <ul class="navbar-nav ml-auto">
         
 {% for link in linklists[section.settings.menu].links %}
-          {% if link.links == blank %}
-            <li class="nav-item {% if link.active %}active{% endif %}">
-              <a class="nav-link" href="{{ link.url }}" aria-current="{% if link.active %}page{% endif %}">{{ link.title }}</a>
-            </li>
-          {% else %}
-            <li class="nav-item dropdown {% for childlink in link.links %}{% if childlink.active %}active{% endif %}{% endfor %}">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown04-{{ forloop.index0 }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown04-{{ forloop.index0 }}">
-                {% for childlink in link.links %}
-                  
-                   
-                 
-                  
-                    <li>
-                      <a class="dropdown-item {% if childlink.active %}active{% endif %}" href="{{ childlink.url }}" aria-current="{% if childlink.active %}page{% endif %}">{{ childlink.title }}</a>
-                    </li>
-                  
-                {% endfor %}
-              
-            </li>
-          {% endif %}
-        {% endfor %}
-
+{% if link.links == blank %}
+  <li class="nav-item {% if link.active %}active{% endif %}">
+    <a class="nav-link" href="{{ link.url }}" aria-current="{% if link.active %}page{% endif %}">{{ link.title }}</a>
+  </li>
+{% else %}
+  <li class="nav-item dropdown {% for childlink in link.links %}{% if childlink.active %}active{% endif %}{% endfor %}">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-{{ forloop.index0 }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
+    
+  </li>
+{% endif %}
+{% endfor %}
 <!-- 	<li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
