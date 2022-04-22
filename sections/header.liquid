@@ -35,10 +35,76 @@
   </div>
 </nav>
 
+{% stylesheet 'scss' %}
+// Announcement bar
+#announcement-bar.bg-dark,
+#announcement-bar.bg-primary {
+  a {
+    text-decoration: underline;
+    color: white;
+  }
+}
+{% endstylesheet %}
+
+
+
 {% schema %}
 {
-  "name": "Header",
+  "name": "Main Menu ",
   "settings": [
+  {
+    "type": "header",
+    "content": "Announcement bar"
+  },
+  {
+    "type": "checkbox",
+    "id": "announcement_enabled",
+    "label": "Enable announcement bar",
+    "default": true
+  },
+  {
+    "type": "checkbox",
+    "id": "announcement_homepage",
+    "label": "Show on home page only",
+    "default": true
+  },
+  {
+    "type": "select",
+    "id": "announcement_color",
+    "label": "Announcement bar Color",
+    "options": [
+      {
+        "value": "bg-white text-muted", "label": "White"
+      },
+      {
+        "value": "bg-light text-muted", "label": "Light"
+      },
+      {
+        "value": "bg-dark text-light", "label": "Dark"
+      },
+      {
+        "value": "bg-primary text-light", "label": "Primary"
+      }
+    ],
+    "default": "bg-dark text-light"
+  },
+  {
+    "type": "text",
+    "id": "announcement_text",
+    "label": "Announcement text",
+    "default": "Announce something important here"
+  },
+  {
+    "type": "url",
+    "id": "announcement_link_url",
+    "label": "Announcement link URL"
+  },
+  {
+    "type": "text",
+    "id": "announcement_link_text",
+    "label": "Announcement link text",
+    "default": "Learn more"
+  },
   {
     "type": "header",
     "content": "Logo"
@@ -57,15 +123,15 @@
   },
     {
       "type": "link_list",
-      "id": "link_list",
-      "label": "Main Menu",
+      "id": "main_linklist",
+      "label": " Menu",
       "default": "main-menu",
       "info": "Main Menu here"
     }
   ],
   "presets": [
     {
-      "name": "Menu"
+      "name": "Main Menu"
     }
   ]
 }
