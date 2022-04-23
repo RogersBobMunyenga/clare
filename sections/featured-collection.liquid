@@ -24,10 +24,10 @@
                                 <span class="status">30%</span>
                             </a>
                             <div class="text pt-3 px-3">
-                                <h3><a href="#">Young Woman Wearing Dress</a></h3>
+                                <h3><a href="{{ product.url }}">{{ product.title }}</a></h3>
                                 <div class="d-flex">
                                     <div class="pricing">
-                                        <p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
+                                        <p class="price"><span class="mr-2 price-dc">{{ product.price | money_with_currency }}</span><span class="price-sale">{{ product.price | money_with_currency}}</span></p>
                                     </div>
                                     <div class="rating">
                                         <p class="text-right">
