@@ -31,10 +31,10 @@
                                       
                                        <p class="price">
                                          {% if product.compare_at_price and product.compare_at_price != product.price %}
-                                            <span class="mr-2 price-dc">{{product.compare_at_price  | money}}}</span>
+                                            <span class="mr-2 price-dc">{{product.compare_at_price  | money}}</span>
                                             
                                             {% else %}
-                                            <span class="price-sale">{{product.price  | money}}</span>
+                                            <span class="price-sale">{{product.price}}</span>
                                             {% endif %}
                                         </p>
                                     </div>
