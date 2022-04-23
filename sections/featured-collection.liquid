@@ -20,14 +20,14 @@
                    {% for product in section.settings.collection.products limit: section.settings.product_limit  %}
                     <div class="item">
                         <div class="product">
-                            <a href="#" class="img-prod"><img class="img-fluid" src="{{ product.featured_image.src  | img_url: '1920x' }}" alt="Colorlib Template">
+                            <a href="#" class="img-prod"><img class="img-fluid" src="{{ product.featured_image.src  | img_url: '1920x' }}" >
                                 <span class="status">30%</span>
                             </a>
                             <div class="text pt-3 px-3">
                                 <h3><a href="{{ product.url }}">{{ product.title }}</a></h3>
                                 <div class="d-flex">
                                     <div class="pricing">
-                                        <p class="price"><span class="mr-2 price-dc">{{ product.price | money_with_currency }}</span><span class="price-sale">$80.00</span></p>
+                                        <p class="price"><span class="mr-2 price-dc">{{ product.price | money_with_currency }}</span><span class="price-sale">80.00</span></p>
                                     </div>
                                     <div class="rating">
                                         <p class="text-right">
