@@ -19,10 +19,22 @@
         "hero-title": "<p>LE STYLIST<\/p>",
         "hero-subtitle": "Wear Your Dress"
       }
+    },
+    "1650715547240039d0": {
+      "type": "featured-collection",
+      "settings": {
+      }
+    },
+    "1650715556ea6fef72": {
+      "type": "image-with-text",
+      "settings": {
+      }
     }
   },
   "order": [
     "16507067173ec8c933",
-    "16507067011f107cd5"
+    "16507067011f107cd5",
+    "1650715547240039d0",
+    "1650715556ea6fef72"
   ]
 }
