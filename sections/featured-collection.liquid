@@ -1,8 +1,8 @@
- {% assign collection = collection[section.settings.collection] %}
-       {% for product in collection.products limit: section.settings.product_limit %}
+ 
 <section class="ftco-section ftco-product">
   
     <div class="container">
+      
         <div class="row justify-content-center mb-3 pb-3">
       <div class="col-md-12 heading-section text-center ftco-animate">
           <h1 class="big">Trending</h1>
@@ -18,6 +18,8 @@
                 <div class="product-slider owl-carousel ftco-animate">
                    
                     <div class="item">
+                      {% assign collection = collection[section.settings.collection] %}
+      				 {% for product in collection.products limit: section.settings.product_limit %}
                         <div class="product">
                             <a href="#" class="img-prod"><img class="img-fluid" src="{{ product.featured_image.src  | img_url: '1920x' }}" alt="Colorlib Template">
                                 <span class="status">30%</span>
@@ -40,6 +42,7 @@
                                 </div>
                             </div>
                         </div>
+                      {% endfor %}
                     </div>
                  
 <!--                     <div class="item">
@@ -163,7 +166,7 @@
     </div>
   
 </section>
-{% endfor %}
+
 
 {% schema %}
 {
