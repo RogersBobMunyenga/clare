@@ -23,18 +23,59 @@
     </div>
 </section>
 
+
+
 {% schema %}
- {
-   "name": "Image With Text",
+{
+   "name": "Image with Text",
     "settings": [
+    {
+       "type": "text",
+        "id": "title",
+        "label": "title",
+        "default": "<p>CLARE  </p>",
+        "info": "Title here"
+    },
+    
+    {
+       "type": "text",
+        "id": "Subtitle",
+        "label": "subtitle",
+        "default": "<p>ONLINE </p>",
+        "info": "Subtitle here"
+    },
+    {
+       "type": "text",
+        "id": "subtitle",
+        "label": "subtitle",
+        "default": "<p>FASHION SHOP</p>",
+        "info": "Subtitle here"
+    },
+   
+  
+    
+   
+    {
+       "type": "richtext",
+       "id": "text",
+        "label": "Text",
+        "default": "<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>",
+        "info": "Your text here"
+    },
+    {
+       "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "Image here"
+    }
     
     
     ],
    "presets": [
        {
            
-           "name":"Image With Text"
+           "name":"Image with Text"
        }
    ]
- }
+}
 {% endschema %}
