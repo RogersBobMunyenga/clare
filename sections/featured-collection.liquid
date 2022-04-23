@@ -8,11 +8,12 @@
       </div>
     </div>
       {% assign collection = collection[section.settings.collection] %}
+       {% for product in collection.products limit: section.settings.product_limit %}
         <div class="row">
            
 
             <div class="col-md-12">
-                {% for product in collection.products limit: section.settings.product_limit %}
+               
                 <div class="product-slider owl-carousel ftco-animate">
                    
                     <div class="item">
@@ -153,10 +154,11 @@
                         </div>
                     </div> -->
                 </div>
-              {% endfor %}
+       
             </div>
            
         </div>
+         {% endfor %}
     </div>
 </section>
 
