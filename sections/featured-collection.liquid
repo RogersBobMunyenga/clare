@@ -156,10 +156,31 @@
 </section>
 
 {% schema %}
- {
+{
    "name": "Featured Collection",
     "settings": [
-    
+        {
+           "type": "text",
+           "id": "title",
+           "label": "Featured Collection Title",
+          "default": "Trending"
+        },
+        {
+           "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+
+        },
+        {
+           "type": "range",
+              "id": "product_limit",
+                "label": "Product Limit",
+                "min": 3,
+                "max": 9,
+                "default": 6
+        }
+        
+
     
     ],
    "presets": [
@@ -168,5 +189,5 @@
            "name":"Featured Collection"
        }
    ]
- }
+}
 {% endschema %}
