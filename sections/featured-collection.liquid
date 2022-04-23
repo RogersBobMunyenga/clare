@@ -9,9 +9,9 @@
     </div>
       {% assign collection = collection[section.settings.collection] %}
         <div class="row">
-          
+             {% for product in collection.products limit: section.settings.product_limit %}
+
             <div class="col-md-12">
-              {% for product in collection.products limit: section.settings.product_limit %}
                 <div class="product-slider owl-carousel ftco-animate">
                    
                     <div class="item">
@@ -38,7 +38,7 @@
                             </div>
                         </div>
                     </div>
-                  {% endfor %}
+                 
 <!--                     <div class="item">
                         <div class="product">
                             <a href="#" class="img-prod"><img class="img-fluid" src="{{ 'product-2.jpg' | asset_url }}" alt="Colorlib Template"></a>
@@ -153,6 +153,7 @@
                     </div> -->
                 </div>
             </div>
+           {% endfor %}
         </div>
     </div>
 </section>
