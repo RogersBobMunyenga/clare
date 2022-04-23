@@ -27,7 +27,7 @@
                                 <h3><a href="{{ product.url }}">{{ product.title }}</a></h3>
                                 <div class="d-flex">
                                     <div class="pricing">
-                                        <p class="price"><span class="mr-2 price-dc">{{ product.price | money_with_currency }}</span><span class="price-sale">80.00</span></p>
+                                        <p class="price"><span class="mr-2 price-dc">{{ product.price | money_with_currency }}</span>{% if product.compare_at_price != product.price %}<span class="price-sale">$80.00</span>{% endif %}</p>
                                     </div>
                                     <div class="rating">
                                         <p class="text-right">
