@@ -1,9 +1,9 @@
- {% assign collection = collection[section.settings.collection] %}
-       {% for product in collection.products limit: section.settings.product_limit %}
+ 
 <section class="ftco-section ftco-product">
   
     <div class="container">
         <div class="row justify-content-center mb-3 pb-3">
+          
       <div class="col-md-12 heading-section text-center ftco-animate">
           <h1 class="big">Trending</h1>
         <h2 class="mb-4">Trending</h2>
@@ -11,7 +11,8 @@
     </div>
      
         <div class="row">
-           
+           {% assign collection = collection[section.settings.collection] %}
+       {% for product in collection.products limit: section.settings.product_limit %}
 
             <div class="col-md-12">
                
@@ -157,13 +158,13 @@
                 </div>
        
             </div>
-           
+           {% endfor %}
         </div>
          
     </div>
   
 </section>
-{% endfor %}
+
 
 {% schema %}
 {
