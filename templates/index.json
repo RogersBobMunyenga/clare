@@ -1,12 +1,28 @@
 {
   "sections": {
-    "hero": {
+    "16507067173ec8c933": {
+      "type": "header",
+      "settings": {
+        "announcement_enabled": true,
+        "announcement_homepage": true,
+        "announcement_color": "bg-dark text-light",
+        "announcement_text": "Announce something important here",
+        "announcement_link_url": "",
+        "announcement_link_text": "Learn more",
+        "logo_height": "30",
+        "main_linklist": "main-menu"
+      }
+    },
+    "16507067011f107cd5": {
       "type": "hero",
       "settings": {
+        "hero-title": "<p>LE STYLIST<\/p>",
+        "hero-subtitle": "Wear Your Dress"
       }
     }
   },
   "order": [
-    "hero"
+    "16507067173ec8c933",
+    "16507067011f107cd5"
   ]
 }

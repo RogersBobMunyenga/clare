@@ -5,8 +5,7 @@
         "type": "header",
         "settings": {
           "logo": "shopify:\/\/shop_images\/logo-clare-5.png",
-          "logo_height": "30",
-          "link_list": "main-menu"
+          "logo_height": "30"
         }
       },
       "hero": {
