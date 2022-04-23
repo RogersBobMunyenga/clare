@@ -26,9 +26,12 @@
                             <div class="text pt-3 px-3">
                                 <h3><a href="{{ product.url }}">{{ product.title }}</a></h3>
                                 <div class="d-flex">
+                                   {% if section.settings.show_product_price %}
                                     <div class="pricing">
-                                       <p class="price"><span class="mr-2 price-dc">{{product.price  | money_with_currency}}</span><span class="price-sale">{{product.price  | money_with_currency}}</span></p>
+                                      
+                                       <p class="price"><span class="mr-2 price-dc">{{ product.compare_at_price | money}}</span><span class="price-sale">{{ product.price | money }}</span></p>
                                     </div>
+                                  	{% endif %}
                                     <div class="rating">
                                         <p class="text-right">
                                             <span class="ion-ios-star-outline"></span>
