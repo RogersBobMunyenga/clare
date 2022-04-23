@@ -1,9 +1,12 @@
 {
   "sections": {
-    "main": {
-      "type": "page",
-      "settings": {}
+    "hero": {
+      "type": "hero",
+      "settings": {
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "hero"
+  ]
 }
