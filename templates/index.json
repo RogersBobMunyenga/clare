@@ -10,6 +10,9 @@
     "1650715547240039d0": {
       "type": "featured-collection",
       "settings": {
+        "title": "Trending",
+        "collection": "trending",
+        "product_limit": 3
       }
     },
     "1650715556ea6fef72": {
