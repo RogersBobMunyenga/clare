@@ -30,12 +30,22 @@
                                     <div class="pricing">
                                       
                                        <p class="price">
-                                         {% if product.compare_at_price and product.compare_at_price != product.price %}
-                                            <span class="mr-2 price-dc">{{product.regular_price}}</span>
-                                            
-                                            {% else %}
-                                            <span class="price-sale">{{product.price}}</span>
-                                            {% endif %}
+                                         {% if section.settings.show_product_price %}
+          <div class="product-price mb-4 font-size-120" style="{{ settings.color_price | prepend: 'color: ' }}">
+            {% if product.compare_at_price_max > product.price %}
+              <span class="sr-only">{{ 'product.regular_price' | t }}</span>
+              {% if product.compare_at_price > product.price %}
+              <s class="text-muted opacity-75 mr-2">
+                {{ product.compare_at_price | money }}
+              </s>
+              {% endif %}
+            {% endif %}
+            <span>
+              {{ product.price | money }}
+            </span>
+          </div>
+        {% endif %}
+
                                         </p>
                                     </div>
                                   	{% endif %}
