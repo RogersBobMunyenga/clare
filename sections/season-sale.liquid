@@ -1,5 +1,5 @@
 
-<section class="ftco-section ftco-section-more img" style="background-image: url({{ 'bg_5.jpg' | asset_url }});">
+<section class="ftco-section ftco-section-more img" style="background-image: url('{{ section.settings.bg-image | img_url: 'master' }}');">
     <div class="container">
         <div class="row justify-content-center mb-3 pb-3">
       <div class="col-md-12 heading-section ftco-animate">
@@ -18,7 +18,13 @@
            "id": "title",
            "label": "Season Sale Title",
               "default": "Summer Sale"
-        }
+        },
+		{
+     "type": "image_picker",
+      "id": "bg-image",
+        "label": "  Season Sale Background Image"
+        
+    }
     
     ],
    "presets": [
