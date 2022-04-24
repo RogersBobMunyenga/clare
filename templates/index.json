@@ -18,11 +18,15 @@
     "1650715556ea6fef72": {
       "type": "image-with-text",
       "settings": {
+        "title": "<p>Modist <br>Online <br> <span>Fashion Shop<\/span><\/p>"
       }
     },
     "16507157901b905e8e": {
       "type": "homepage-collection",
       "settings": {
+        "title": "Our Products",
+        "collection": "trending",
+        "product_limit": 6
       }
     },
     "1650715808a3c106f8": {
