@@ -19,6 +19,7 @@
     "1650715556ea6fef72": {
       "type": "image-with-text",
       "settings": {
+        "bg-image": "shopify:\/\/shop_images\/bg_2.jpg",
         "title": "<p>Modist <br>Online <br> <span>Fashion Shop<\/span><\/p>"
       }
     },
