@@ -9,10 +9,11 @@
       <div class="row justify-content-center">
         <div class="col-md-8 ftco-animate">
             <div class="row ftco-animate">
+                {%- if section.blocks.size > 0 -%}
+                     {%- for block in section.blocks -%} 
                 <div class="col-md-12">
                   <div class="carousel-testimony owl-carousel ftco-owl">
-                     {%- if section.blocks.size > 0 -%}
-                     {%- for block in section.blocks -%} 
+                   
                     <div class="item">
                       <div class="testimony-wrap py-4 pb-5">
                         <div class="user-img mb-4" style="background-image: url('{{ section.settings.bg-image | img_url: 'master' }}')">
@@ -36,12 +37,13 @@
                         
                       </div>
                     </div>
-                     {%- endfor -%}
-					{%- endif -%}
+                    
                     
                     
                   </div>
                 </div>
+               {% endfor %}
+					{% endif %}
               </div>
         </div>
       </div>
