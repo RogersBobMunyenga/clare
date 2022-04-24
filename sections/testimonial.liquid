@@ -3,7 +3,7 @@
     <div class="container">
               <div class="row justify-content-center mb-3 pb-3">
         <div class="col-md-12 heading-section text-center ftco-animate">
-            <h1 class="big">Testimonial</h1>
+            <h1 class="big">{{section.setings.heading}}</h1>
         </div>
       </div>    		
       <div class="row justify-content-center">
@@ -13,74 +13,19 @@
                   <div class="carousel-testimony owl-carousel ftco-owl">
                     <div class="item">
                       <div class="testimony-wrap py-4 pb-5">
-                        <div class="user-img mb-4" style="background-image: url({{ 'person_1.jpg' | asset_url }})">
+                        <div class="user-img mb-4" style="background-image: url('{{ section.settings.bg-image }}')">
                           <span class="quote d-flex align-items-center justify-content-center">
                             <i class="icon-quote-left"></i>
                           </span>
                         </div>
                         <div class="text text-center">
-                          <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                          <p class="name">Roger Scott</p>
-                          <span class="position">Customer</span>
+                          <p class="mb-4">{{ section.settings.description}}</p>
+                          <p class="name">{{section.settings.name}}</p>
+                          <span class="position">{{section.settings.position}}</span>
                         </div>
                       </div>
                     </div>
-                    <div class="item">
-                      <div class="testimony-wrap py-4 pb-5">
-                        <div class="user-img mb-4" style="background-image: url({{ 'person_2.jpg' | asset_url }})">
-                          <span class="quote d-flex align-items-center justify-content-center">
-                            <i class="icon-quote-left"></i>
-                          </span>
-                        </div>
-                        <div class="text text-center">
-                          <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                          <p class="name">Roger Scott</p>
-                          <span class="position">Customer</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="testimony-wrap py-4 pb-5">
-                        <div class="user-img mb-4" style="background-image: url({{ 'person_3.jpg' | asset_url }})">
-                          <span class="quote d-flex align-items-center justify-content-center">
-                            <i class="icon-quote-left"></i>
-                          </span>
-                        </div>
-                        <div class="text text-center">
-                          <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                          <p class="name">Roger Scott</p>
-                          <span class="position">Customer</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="testimony-wrap py-4 pb-5">
-                        <div class="user-img mb-4" style="background-image: url({{ 'person_1.jpg' | asset_url }})">
-                          <span class="quote d-flex align-items-center justify-content-center">
-                            <i class="icon-quote-left"></i>
-                          </span>
-                        </div>
-                        <div class="text text-center">
-                          <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                          <p class="name">Roger Scott</p>
-                          <span class="position">Customer</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="testimony-wrap py-4 pb-5">
-                        <div class="user-img mb-4" style="background-image: url(images/{{ 'person_1.jpg' | asset_url }})">
-                          <span class="quote d-flex align-items-center justify-content-center">
-                            <i class="icon-quote-left"></i>
-                          </span>
-                        </div>
-                        <div class="text text-center">
-                          <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                          <p class="name">Roger Scott</p>
-                          <span class="position">Customer</span>
-                        </div>
-                      </div>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -95,6 +40,36 @@
    "name": "Testimonial",
     "settings": [
     
+    {
+     "type": "image_picker",
+      "id": "bg-image",
+        "label": " Season Sale Background Image"
+        
+    },
+    {
+     "type": "text",
+      "id": "heading",
+        "label": "Testimonial Section Title"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+        "label": "Testimonial description",
+        "default": "<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>"
+      },
+      {
+        "type": "text",
+        "id": "name",
+         "label": "Customer Name",
+          "default": "Roger Scott"
+       },
+        {
+          "type": "text",
+          "id": "position",
+          "label": "Customer Position",
+            "default": "Customer"
+        }
+        
     
     ],
    "presets": [
