@@ -37,50 +37,73 @@
     </div>
   </section>
   
-  
+
 {% schema %}
- {
-   "name": "Testimonial",
-    "settings": [
-    
+{
+  "name": "Testimonials",
+  "max_blocks": 8,
+  "settings": [
     {
-     "type": "image_picker",
-      "id": "bg-image",
-        "label": " Season Sale Background Image"
-        
-    },
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Testimonials"
+    }
+  ],
+  "blocks": [
     {
-     "type": "text",
-      "id": "heading",
-        "label": "Testimonial Section Title",
-		"default": "Testimonial"
-    },
-    {
-      "type": "richtext",
-      "id": "description",
-        "label": "Testimonial description",
-        "default": "<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>"
-      },
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
       {
+        "type": "image_picker",
+         "id": "bg-image",
+           "label": " Season Sale Background Image"
+           
+       },
+       {
         "type": "text",
-        "id": "name",
-         "label": "Customer Name",
-          "default": "Roger Scott"
+         "id": "heading",
+           "label": "Testimonial Title"
        },
         {
+          "type": "richtext",
+          "id": "description",
+          "label": "Text",
+          "default": "<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>"
+        },
+        {
+          "type": "text",
+          "id": "name",
+           "label": "Customer Name",
+            "default": "Roger Scott"
+         },
+         {
           "type": "text",
           "id": "position",
           "label": "Customer Position",
             "default": "Customer"
         }
         
-    
-    ],
-   "presets": [
-       {
-           
-           "name":"Testimonial"
-       }
-   ]
- }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials",
+      "category": "Text",
+      "blocks": [
+        {
+          "type": "testimonial"
+        },
+        {
+          "type": "testimonial"
+        },
+        {
+          "type": "testimonial"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
