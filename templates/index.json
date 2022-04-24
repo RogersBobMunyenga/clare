@@ -11,18 +11,17 @@
       "type": "featured-collection",
       "settings": {
         "title": "Trending",
-        "collection": "our-products",
+        "collection": "trending",
         "product_limit": 3
       }
     },
     "1650715556ea6fef72": {
       "type": "image-with-text",
       "settings": {
-        "title": "<p>Modist <br>Online <br> <span>Fashion Shop<\/span><\/p>"
       }
     },
     "16507157901b905e8e": {
-      "type": "collection",
+      "type": "homepage-collection",
       "settings": {
       }
     },
