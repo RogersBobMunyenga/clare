@@ -7,10 +7,11 @@
       </div>  
        		
       <div class="row justify-content-center">
+         {% if section.blocks.size > 0 %}
+                     {% for block in section.blocks %} 
         <div class="col-md-8 ftco-animate">
             <div class="row ftco-animate">
-                {%- if section.blocks.size > 0 -%}
-                     {%- for block in section.blocks -%} 
+               
                 <div class="col-md-12">
                   <div class="carousel-testimony owl-carousel ftco-owl">
                    
@@ -42,10 +43,11 @@
                     
                   </div>
                 </div>
-               {% endfor %}
-					{% endif %}
+               
               </div>
         </div>
+        {% endfor %}
+			{% endif %}
       </div>
  
     </div>
