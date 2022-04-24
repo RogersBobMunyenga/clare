@@ -3,6 +3,7 @@
     "16507067011f107cd5": {
       "type": "hero",
       "settings": {
+        "bg-image": "shopify:\/\/shop_images\/bg_1.jpg",
         "hero-title": "<p>LE STYLIST<\/p>",
         "hero-subtitle": "Wear Your Dress"
       }
