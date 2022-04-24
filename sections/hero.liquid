@@ -1,6 +1,6 @@
 
 
-<div class="hero-wrap js-fullheight" style="background-image: url('{{ 'bg_1.jpg' | asset_url }}');">
+<div class="hero-wrap js-fullheight" style="background-image: url('{{ section.settings.bg-image | img_url: 'master' }}');">
     <div class="overlay"></div>
     <div class="container">
       <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
@@ -25,6 +25,12 @@
   {
    "name": "hero",
    "settings": [
+	{
+     "type": "image_picker",
+      "id": "bg-image",
+        "label": " Hero Background Image"
+        
+    },
     {
      "type": "text",
      "id": "hero-title",
