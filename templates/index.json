@@ -32,7 +32,8 @@
     "1650715808a3c106f8": {
       "type": "season-sale",
       "settings": {
-        "title": "Summer Sale"
+        "title": "Summer Sale",
+        "bg-image": "shopify:\/\/shop_images\/bg_5.jpg"
       }
     },
     "16507158651540f753": {
