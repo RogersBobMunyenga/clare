@@ -41,6 +41,11 @@
     "16507158651540f753": {
       "type": "testimonial",
       "settings": {
+        "bg-image": "shopify:\/\/shop_images\/person_1.jpg",
+        "heading": "Testimonial",
+        "description": "<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.<\/p>",
+        "name": "Roger Scott",
+        "position": "Customer"
       }
     },
     "1650716072b33df61b": {
