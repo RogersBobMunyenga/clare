@@ -11,7 +11,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Trending",
-        "collection": "trending",
+        "collection": "our-products",
         "product_limit": 3
       }
     },
