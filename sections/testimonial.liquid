@@ -13,36 +13,39 @@
                
                 <div class="col-md-12">
                   <div class="carousel-testimony owl-carousel ftco-owl">
-                   
+                     {% if section.blocks.size > 0 %}
+                     {% for block in section.blocks %}
                     <div class="item">
-                       {% if section.blocks.size > 0 %}
-                     {% for block in section.blocks %} 
+                     } 
                       <div class="testimony-wrap py-4 pb-5">
-                        <div class="user-img mb-4" style="background-image: url('{{ section.settings.bg-image | img_url: 'master' }}')">
+                        {% if block.settings.bg_image != blank %}
+                        <div class="user-img mb-4" style="background-image: url('{{ section.settings.bg_image | img_url: 'master' }}')">
+     
                           <span class="quote d-flex align-items-center justify-content-center">
                             <i class="icon-quote-left"></i>
                           </span>
                         </div>
+                        {% endif %}
                         
                         <div class="text text-center">
-                          {%- if block.settings.testimonial != blank -%}
+                          {% if block.settings.testimonial != blank %}
                           <p class="mb-4">{{ section.settings.description}}</p>
-                          {%- endif -%}
+                          {% endif %}
                          
                             {%- if block.settings.name != blank -%}
                           <p class="name">{{section.settings.name}}</p>
-                          {%- endif -%}
-                          {%- if block.settings.position != blank -%}
+                          {% endif %}
+                          {% if block.settings.position != blank %}
                           <span class="position">{{section.settings.position}}</span>
-                          {%- endif -%}
+                          {% endif %}
                         </div>
                         
                       </div>
-                       {% endfor %}
-			          {% endif %}
+                      
                     </div>
                     
-                    
+                     {% endfor %}
+			          {% endif %}
                     
                   </div>
                 </div>
@@ -76,7 +79,7 @@
       "settings": [
       {
         "type": "image_picker",
-         "id": "bg-image",
+         "id": "bg_image",
            "label": " Season Sale Background Image"
            
        },
