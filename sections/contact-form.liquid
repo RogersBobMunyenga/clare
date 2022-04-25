@@ -4,41 +4,292 @@
 
 {% include 'include-contact-form' %}
 		
+
+
 {% schema %}
 {
-    "name": "Contact us - page",
-    "settings": [
+  "name": "Contact form",
+  "class": "shopify-section--contact-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "contact_image",
+      "label": "Image",
+      "info": "1024 x 1024px recommended"
+    },
+    {
+      "type": "text",
+      "id": "contact_heading",
+      "label": "Heading",
+      "default": "Contact form"
+    },
+    {
+      "type": "text",
+      "id": "contact_subheading",
+      "label": "Subheading",
+      "default": "Subheading"
+    },
+    {
+      "type": "richtext",
+      "id": "contact_content",
+      "label": "Text",
+      "default": "<p>Contact form description.</p>"
+    },
+    {
+      "type": "select",
+      "id": "contact_text_position",
+      "label": "Text position",
+      "default": "left",
+      "options": [
         {
-            "type": "header",
-            "content": "General settings"
+          "value": "left",
+          "label": "Left"
         },
         {
-            "type": "text",
-            "id": "max_width",
-            "label": "Content max-width (px)",
-            "info": "Adjust post content width (in pixels). Leave empty to use the container.",
-            "default": "768"
+          "value": "center",
+          "label": "Center"
         },
         {
-            "type": "select",
-            "id": "heading_size",
-            "label": "Heading size",
-            "default": "display-5",
-            "options": [
-                { "group": "Display", "value": "display-1", "label": "Display 1" },
-                { "group": "Display", "value": "display-2", "label": "Display 2" },
-                { "group": "Display", "value": "display-3", "label": "Display 3" },
-                { "group": "Display", "value": "display-4", "label": "Display 4" },
-                { "group": "Display", "value": "display-5", "label": "Display 5" },
-                { "group": "Display",  "value": "display-6", "label": "Display 6" },
-                { "group": "Heading", "value": "h1", "label": "H1" },
-                { "group": "Heading", "value": "h2", "label": "H2" },
-                { "group": "Heading", "value": "h3", "label": "H3" },
-                { "group": "Heading", "value": "h4", "label": "H4" },
-                { "group": "Heading", "value": "h5", "label": "H5" },
-                { "group": "Heading", "value": "h6", "label": "H6" }
-            ]
+          "value": "right",
+          "label": "Right"
         }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "contact_text_alignment",
+      "label": "Text alignment",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "contact_social_buttons",
+      "label": "Show social media icons"
+    },
+    {
+      "type": "header",
+      "content": "Advanced"
+    },
+    {
+      "type": "paragraph",
+      "content": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Custom CSS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "custom",
+      "name": "Option",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label"
+        },
+        {
+          "type": "text",
+          "id": "placeholder",
+          "label": "Placeholder",
+          "default": "Make a selection",
+          "info": "Only applies to Drop-down"
+        },
+        {
+          "type": "checkbox",
+          "id": "required",
+          "label": "Field is required"
+        },
+        {
+          "type": "text",
+          "id": "options_1",
+          "label": "Option 1",
+          "default": "Option 1"
+        },
+        {
+          "type": "text",
+          "id": "options_2",
+          "label": "Option 2",
+          "default": "Option 2"
+        },
+        {
+          "type": "text",
+          "id": "options_3",
+          "label": "Option 3",
+          "default": "Option 3"
+        },
+        {
+          "type": "text",
+          "id": "options_4",
+          "label": "Option 4"
+        },
+        {
+          "type": "text",
+          "id": "options_5",
+          "label": "Option 5"
+        },
+        {
+          "type": "text",
+          "id": "options_6",
+          "label": "Option 6"
+        },
+        {
+          "type": "select",
+          "id": "field_type",
+          "label": "Field type",
+          "default": "drop_down",
+          "options": [
+            {
+              "value": "drop_down",
+              "label": "Drop-down"
+            },
+            {
+              "value": "checkbox",
+              "label": "Checkbox"
+            },
+            {
+              "value": "radio",
+              "label": "Radio buttons"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Content",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Logo",
+          "info": "500 x 500px recommended"
+        },
+        {
+          "type": "range",
+          "id": "logo_display_width",
+          "label": "Logo display width",
+          "step": 5,
+          "min": 105,
+          "max": 205,
+          "default": 150,
+          "unit": "px"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Use this field to display text of any kind, such as standard reply times for inquiries.</p>"
+        }
+      ]
+    },
+    {
+      "type": "richtext",
+      "name": "Text field",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "label",
+          "label": "Label"
+        },
+        {
+          "type": "text",
+          "id": "placeholder",
+          "label": "Placeholder"
+        },
+        {
+          "type": "checkbox",
+          "id": "required",
+          "label": "Field is required",
+          "info": "Email field is required"
+        },
+        {
+          "type": "select",
+          "id": "field_type",
+          "label": "Field type",
+          "default": "text",
+          "options": [
+            {
+              "value": "text",
+              "label": "Text"
+            },
+            {
+              "value": "textarea",
+              "label": "Textarea"
+            },
+            {
+              "value": "email",
+              "label": "Email"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "Contact form",
+    "category": "Store information",
+    "settings": {
+      "contact_subheading": "Contact Us Today!",
+      "contact_content": "<p>Customize your contact form to suit your business! Add custom fields like a dropdown menu, checkbox, text fields and more, so that you can gather pertinent info from shoppers right from the get-go, to help answer their inquiries more effectively.</p>"
+    },
+    "blocks": [
+      {
+        "type": "richtext",
+        "settings": {
+          "placeholder": "Name",
+          "required": true,
+          "field_type": "text"
+        }
+      },
+      {
+        "type": "richtext",
+        "settings": {
+          "placeholder": "Email",
+          "required": true,
+          "field_type": "email"
+        }
+      },
+      {
+        "type": "richtext",
+        "settings": {
+          "placeholder": "Message",
+          "required": true,
+          "field_type": "textarea"
+        }
+      }
     ]
+  }],
+  "templates": [
+    "index",
+    "product",
+    "page"
+  ]
 }
+
 {% endschema %}
