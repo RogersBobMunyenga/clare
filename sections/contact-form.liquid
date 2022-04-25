@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row block-9">
           <div class="col-md-6 order-md-last d-flex">
-            {%form 'contact' class="bg-white p-5 contact-form"%}
+            {%form 'contact' class="bg-white p-5 contact-form" %}
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="Your Name">
               </div>
@@ -15,7 +15,19 @@
                 <input type="text" class="form-control" placeholder="Subject">
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea 
+                       		name="" 
+                          id="" 
+                          cols="30" 
+                          rows="7" 
+                          class="form-control" 
+                          placeholder="{{ 'general.contact.message' | t }}" 
+                          aria-label="{{ 'general.contact.message' | t }}" 
+                          required
+                      {% if form.body %}
+                        {{ form.body }}
+                    {%- endif -%}>
+                </textarea>
               </div>
               <div class="form-group">
                 <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
