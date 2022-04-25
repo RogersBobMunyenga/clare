@@ -38,60 +38,6 @@
         "bg-image": "shopify:\/\/shop_images\/bg_5.jpg"
       }
     },
-    "16507158651540f753": {
-      "type": "testimonial",
-      "blocks": {
-        "7b4bf4ce-3a9a-49c5-bf6e-3fe964ea2ef2": {
-          "type": "testimonial",
-          "settings": {
-            "bg_image": "shopify:\/\/shop_images\/person_1.jpg",
-            "heading": "Testimonial",
-            "description": "<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.<\/p>",
-            "name": "Roger Scott",
-            "position": "Customer"
-          }
-        },
-        "1ca4e552-5b11-4290-aa39-e962e6145875": {
-          "type": "testimonial",
-          "settings": {
-            "bg_image": "shopify:\/\/shop_images\/person_3.jpg",
-            "heading": "Testimonial",
-            "description": "<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.<\/p>",
-            "name": "Roger Scott",
-            "position": "Customer"
-          }
-        },
-        "df4b2451-256f-4b17-94e4-29635a1b8fa6": {
-          "type": "testimonial",
-          "settings": {
-            "bg_image": "shopify:\/\/shop_images\/person_2.jpg",
-            "heading": "Testimonial",
-            "description": "<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.<\/p>",
-            "name": "Roger Scott",
-            "position": "Customer"
-          }
-        },
-        "8149c9f4-6a49-4dcb-88d6-212dd3d95fb5": {
-          "type": "testimonial",
-          "settings": {
-            "bg_image": "shopify:\/\/shop_images\/person_4.jpg",
-            "heading": "Testimonial",
-            "description": "<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.<\/p>",
-            "name": "Roger Scott",
-            "position": "Customer"
-          }
-        }
-      },
-      "block_order": [
-        "7b4bf4ce-3a9a-49c5-bf6e-3fe964ea2ef2",
-        "1ca4e552-5b11-4290-aa39-e962e6145875",
-        "df4b2451-256f-4b17-94e4-29635a1b8fa6",
-        "8149c9f4-6a49-4dcb-88d6-212dd3d95fb5"
-      ],
-      "settings": {
-        "title": "Testimonials"
-      }
-    },
     "1650716072b33df61b": {
       "type": "blog",
       "settings": {
@@ -124,7 +70,6 @@
     "1650715556ea6fef72",
     "16507157901b905e8e",
     "1650715808a3c106f8",
-    "16507158651540f753",
     "1650716072b33df61b",
     "1650716080b4faa187",
     "1650716212c0d7f3d3",
