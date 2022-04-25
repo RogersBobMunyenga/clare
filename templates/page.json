@@ -2,8 +2,36 @@
   "sections": {
     "main": {
       "type": "page",
-      "settings": {}
+      "settings": {
+      }
+    },
+    "165090220198250256": {
+      "type": "image-with-text",
+      "settings": {
+        "title": "<p>Modist <br>Online <br> <span>Fashion Shop<\/span><\/p>"
+      }
+    },
+    "16509022119a774245": {
+      "type": "awards",
+      "settings": {
+      }
+    },
+    "1650902258a1cedbf8": {
+      "type": "services",
+      "settings": {
+      }
+    },
+    "1650902261d998894c": {
+      "type": "newsletter",
+      "settings": {
+      }
     }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "165090220198250256",
+    "16509022119a774245",
+    "1650902258a1cedbf8",
+    "1650902261d998894c"
+  ]
 }
