@@ -9,10 +9,22 @@
       "type": "contact-form",
       "settings": {
       }
+    },
+    "165090792830cac606": {
+      "type": "newsletter",
+      "settings": {
+      }
+    },
+    "1650907980456b7af4": {
+      "type": "footer",
+      "settings": {
+      }
     }
   },
   "order": [
     "template",
-    "contact-form"
+    "contact-form",
+    "165090792830cac606",
+    "1650907980456b7af4"
   ]
 }
