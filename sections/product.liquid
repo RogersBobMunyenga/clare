@@ -1,10 +1,11 @@
 {% include 'product-header' %}
 
-{% assign current_product = product.selected_or_first_available_variant %}
 
-{% assign product_image = current_product.featured_image |default: product.featured_image %}
 
 <section class="ftco-section bg-light">
+  {% assign current_product = product.selected_or_first_available_variant %}
+
+{% assign product_image = current_product.featured_image |default: product.featured_image %}
     	<div class="container">
     		<div class="row">
     			<div class="col-lg-6 mb-5 ftco-animate">
