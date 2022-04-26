@@ -80,14 +80,30 @@
           "e1c58596-0f29-4b7c-a844-1d2db23d34cb": {
             "type": "text",
             "settings": {
-              "footer_text": "",
-              "footer_link": ""
+              "footer_text": "About",
+              "footer_link": "shopify:\/\/pages\/about"
+            }
+          },
+          "c154186b-ae21-42ed-9904-1d6d7c553f04": {
+            "type": "text",
+            "settings": {
+              "footer_text": "Blog",
+              "footer_link": "shopify:\/\/pages\/blog"
+            }
+          },
+          "cf3e8e1e-cf91-4b7b-93d0-a957fbed7d03": {
+            "type": "text",
+            "settings": {
+              "footer_text": "Contact Us",
+              "footer_link": "shopify:\/\/pages\/contact"
             }
           }
         },
         "block_order": [
           "cafc9cb2-7bd1-4586-8049-e795637f0da4",
-          "e1c58596-0f29-4b7c-a844-1d2db23d34cb"
+          "e1c58596-0f29-4b7c-a844-1d2db23d34cb",
+          "c154186b-ae21-42ed-9904-1d6d7c553f04",
+          "cf3e8e1e-cf91-4b7b-93d0-a957fbed7d03"
         ],
         "settings": {
           "twitter": "",
