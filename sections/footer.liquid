@@ -39,14 +39,15 @@
             <h2 class="ftco-heading-2">Help</h2>
             <div class="d-flex">
                 <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
-                  <li><a href="#" class="py-2 d-block">Shipping Information</a></li>
-                  <li><a href="#" class="py-2 d-block">Returns &amp; Exchange</a></li>
-                  <li><a href="#" class="py-2 d-block">Terms &amp; Conditions</a></li>
-                  <li><a href="#" class="py-2 d-block">Privacy Policy</a></li>
+                  {% for block in section.blocks %}
+                  <li><a href="{{ block.settings.footer_link }}" class="py-2 d-block">{{ block.settings.footer_text }}</a></li>
+                  {% endfor %}
+                  
                 </ul>
                 <ul class="list-unstyled">
-                  <li><a href="#" class="py-2 d-block">FAQs</a></li>
-                  <li><a href="#" class="py-2 d-block">Contact</a></li>
+                  {% for block in section.blocks %}
+                  <li><a href="{{ block.settings.footer_link }}" class="py-2 d-block">{{ block.settings.footer_text }}</a></li>
+                  {% endfor %}
                 </ul>
               </div>
           </div>
@@ -67,10 +68,10 @@
       <div class="row">
         <div class="col-md-12 text-center">
 
-       <p>
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="" target="_blank">Bob Rogers Munyenga</a>
-                     
-        </p>
+          <p>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="" target="_blank">Bob Rogers Munyenga</a>
+                               
+          </p>
         </div>
       </div>
     </div>
