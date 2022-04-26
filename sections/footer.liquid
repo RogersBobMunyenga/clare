@@ -5,9 +5,18 @@
           <div class="ftco-footer-widget mb-4">
             <h2 class="ftco-heading-2">Modist</h2>
             <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+              {% if section.settings.twitter != blank %}
               <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+              {% endif %}
+              {% if section.settings.facebook != blank %}
               <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+              {% endif %}
+              {% if section.settings.instagram != blank %}
               <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              {% endif %}
+              
+              
+              
             </ul>
           </div>
         </div>
@@ -55,9 +64,9 @@
       <div class="row">
         <div class="col-md-12 text-center">
 
-          <p>
-                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Bob Rogers  
-                        
+          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>.Downloaded from <a href="https://themeslab.org/" target="_blank">Themeslab</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                       </p>
         </div>
       </div>
@@ -68,8 +77,32 @@
  {
    "name": "Footer",
     "settings": [
+    {
+        "type": "text",
+        "id": "twitter",
+        "label": "Twitter Link"
+        
+    },
+    {
+      "type": "text",
+      "id": "facebook",
+      "label": "Facebook Link"
+      
+  },
+  {
+    "type": "text",
+    "id": "instagram",
+    "label": "Instagram Link"
     
+}
+
     
-    ]
+    ],
+   "presets": [
+       {
+           
+           "name":"Footer"
+       }
+   ]
  }
 {% endschema %}
