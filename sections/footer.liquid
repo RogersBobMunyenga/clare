@@ -23,32 +23,30 @@
         <div class="col-md">
           <div class="ftco-footer-widget mb-4 ml-md-5">
             <h2 class="ftco-heading-2">Menu</h2>
+            {% for block in section.blocks %}
             <ul class="list-unstyled">
-              <!-- <li><a href="#" class="py-2 d-block">Shop</a></li>
-              <li><a href="#" class="py-2 d-block">About</a></li>
-              <li><a href="#" class="py-2 d-block">Journal</a></li> -->
+             
               {% for block in section.blocks %}
               <li><a href="{{ block.settings.footer_link }}" class="py-2 d-block">{{ block.settings.footer_text }}</a></li>
               {% endfor %}
              
             </ul>
+            {% endfor %}
           </div>
         </div>
         <div class="col-md-4">
            <div class="ftco-footer-widget mb-4">
             <h2 class="ftco-heading-2">Help</h2>
             <div class="d-flex">
+              {% for block in section.blocks %}
                 <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
                   {% for block in section.blocks %}
                   <li><a href="{{ block.settings.footer_link }}" class="py-2 d-block">{{ block.settings.footer_text }}</a></li>
                   {% endfor %}
                   
                 </ul>
-                <ul class="list-unstyled">
-                  {% for block in section.blocks %}
-                  <li><a href="{{ block.settings.footer_link }}" class="py-2 d-block">{{ block.settings.footer_text }}</a></li>
-                  {% endfor %}
-                </ul>
+                {% endfor %}
+                
               </div>
           </div>
         </div>
@@ -80,6 +78,15 @@
 {% schema %}
  {
    "name": "Footer",
+   "blocks": [
+     {
+       "name": "Footer",
+       "settings": {
+         "footer_text": "Footer Text",
+         "footer_link": "Footer Link"
+       }
+     }
+     ],
     "settings": [
     {
         "type": "text",
