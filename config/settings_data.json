@@ -4,8 +4,15 @@
       "header": {
         "type": "header",
         "settings": {
+          "announcement_enabled": true,
+          "announcement_homepage": true,
+          "announcement_color": "bg-dark text-light",
+          "announcement_text": "Announce something important here",
+          "announcement_link_url": "",
+          "announcement_link_text": "Learn more",
           "logo": "shopify:\/\/shop_images\/logo-clare-5.png",
-          "logo_height": "30"
+          "logo_height": "30",
+          "main_linklist": "main-menu"
         }
       },
       "hero": {
@@ -62,7 +69,30 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "cafc9cb2-7bd1-4586-8049-e795637f0da4": {
+            "type": "text",
+            "settings": {
+              "footer_text": "Shop",
+              "footer_link": "shopify:\/\/pages\/shop"
+            }
+          },
+          "e1c58596-0f29-4b7c-a844-1d2db23d34cb": {
+            "type": "text",
+            "settings": {
+              "footer_text": "",
+              "footer_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "cafc9cb2-7bd1-4586-8049-e795637f0da4",
+          "e1c58596-0f29-4b7c-a844-1d2db23d34cb"
+        ],
         "settings": {
+          "twitter": "",
+          "facebook": "",
+          "instagram": ""
         }
       }
     },
