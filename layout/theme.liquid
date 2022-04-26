@@ -85,6 +85,6 @@
 
 
     {{ 'app.js' | asset_url | script_tag }}
-    {{ content_for_footer }}
+    {% section 'footer' %}}
   </body>
 </html>
