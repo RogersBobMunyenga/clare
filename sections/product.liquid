@@ -27,12 +27,12 @@
             </p>
             {% form 'product',product, class: 'bg-light py-5 px-5 mb-6' %}
             {% unless product.has_only_default_variant %}
-            {% for product_options in product.options_with_values %}
+            {% for product_option in product.options_with_values %}
             <div class="product-category">
               <span>{{product_option.name}}</span>
               <select class="form-control" data-index="option{{forloop.index}}">
                 {% for value in product_option.values %}
-                <option value="{{value | escape}} {% if product_option.selectted_value %} selected="selected" {%endif%}">{{value}}</option>
+                <option value="{{value | escape}}" {% if product_option.selected_value == value %} selected="selected" {%endif%}>{{value}}</option>
                 {%endfor %}
               </select>
             </div>
