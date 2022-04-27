@@ -19,8 +19,8 @@
         <div class="col-md-5">
           <div class="single-product-images">
             {% for image in product.images %}
-            <div data-thumb="images/single-product/product-1.jpg">
-              <img class="img-fluid" src="images/single-product/product-1.jpg">
+            <div data-thumb="{{image.src | img_url: '1920x' }}">
+              <img class="img-fluid" src="{{image.src | img_url: '1920x' }}">
             </div>
             {% endfor %}
           </div>
