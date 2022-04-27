@@ -9,7 +9,7 @@
             {% for product in collection.products %}
                  <div class="col-sm col-md-6 col-lg-3 ftco-animate">
                  <div class="product">
-                            <a href="#" class="img-prod"><img class="img-fluid lazyload" src="{{ product.featured_image.src  | img_url: '1920x' }}" >
+                            <a href="{{ product.url }}" class="img-prod"><img class="img-fluid lazyload" src="{{ product.featured_image.src  | img_url: '1920x' }}" >
                                 <span class="status">30%</span>
                             </a>
                             <div class="text pt-3 px-3">
