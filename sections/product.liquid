@@ -1,71 +1,112 @@
-{% include 'product-header' %}
+<section class="single-product">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Mens</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Shirts</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
 
+      <div class="row pb-5">
+        <div class="col-md-5">
+          <div class="single-product-images">
+            <div data-thumb="images/single-product/product-1.jpg">
+              <img class="img-fluid" src="images/single-product/product-1.jpg">
+            </div>
+            <div data-thumb="images/single-product/product-2.jpg">
+              <img class="img-fluid" src="images/single-product/product-2.jpg">
+            </div>
+          </div>
+        </div>
 
+        <div class="col-md-7">
+          <div class="single-product-details">
+            <h2>Woman's Shirt</h2>
+            <p class="product-price">$300</p>
+            
+            <p class="product-description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum ipsum dicta quod, quia doloremque aut deserunt commodi quis. Totam a consequatur beatae nostrum, earum consequuntur? Eveniet consequatur ipsum dicta recusandae.
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, velit, sunt temporibus, nulla accusamus similique sapiente tempora, at atque cumque assumenda minus asperiores est esse sequi dolore magnam. Debitis, explicabo.</p>
+            <div class="product-category">
+              <span>Size:</span>
+              <select class="form-control">
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+              </select>
+            </div>
+            <div class="product-category">
+              <span>Color:</span>
+              <select class="form-control">
+                <option>Red</option>
+                <option>Blue</option>
+                <option>Green</option>
+                <option>Orange</option>
+              </select>
+            </div>
+            <div class="product-quantity">
+              <span>Quantity:</span>
+              <input min="1" type="number" id="quantity" name="quantity" value="1" />
+            </div>
+            <div class="product-category">
+              <span>Categories:</span>
+              <ul>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Soap</a></li>
+              </ul>
+            </div>
+            <a href="cart.html" class="btn btn-main">Add To Cart</a>
+          </div>
+        </div>
+      </div>
 
-<section class="ftco-section bg-light">
-  {% assign current_product = product.selected_or_first_available_variant %}
-
-{% assign product_image = current_product.featured_image |default: product.featured_image %}
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-lg-6 mb-5 ftco-animate">
-    				<img src="{{ image.src |  img_url: 'medium' }}" class="img-fluid" alt="" id="ProductMainImage">
-                    {% for image in product.images %}
-                        <img src="{{ image.src |  img_url: 'medium' }}" class="img-fluid" alt="" >
-                    {% endfor %}
-                        
-                    
-    			</div>
-    			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
-    				<h3>{{ product.title }}</h3>
-    				<p class="price"><span>{{ current_product.price |  money_with_currency }}</span></p>
-    				<p>{{ product.description }}</p>
-                  
-                  {% form 'product', product, class: "product-form", id: "AddToCartForm" %}
-						
-			
-						<div class="row mt-4">
-							{% unless product.has_only_default_variant %}
-							{% for product_option in product.options_with_values %}
-								
-							<div class="col-md-6">
-								<div class="form-group d-flex">
-		              <div class="select-wrap">
-	                  <div class="icon">{{ product_option.name}}<span class="ion-ios-arrow-down"></span></div>
-	                  <select name="" id="productSelect" class="form-control form-select" data-index="option{{ forloop.index }}">
-						  {% for value in product_option.values %}
-					
-						<option value=value="{{ value | escape}}" {% if product_option.selected_value == value%} selected="selected" {% endif%}>{{ value }}</option>
-						
-						  {% endfor %}
-	                  
-	                  </select>
-	                </div>
-		            </div>
-							</div>
-							{% endfor %}
-							{% endunless %}
-							
-							<div class="w-100"></div>
-							<div class="input-group col-md-6 d-flex mb-3">
-	             	<span class="input-group-btn mr-2">
-	                	<button type="button" class="quantity-left-minus btn"  data-type="minus" data-field="">
-	                   <i class="ion-ios-remove"></i>
-	                	</button>
-	            		</span>
-	             	<input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="100">
-	             	<span class="input-group-btn ml-2">
-	                	<button type="button" id="AddToCart"  class="quantity-right-plus btn btn-primary py-3 px-5 btn-lg w-100" data-type="plus" data-field="">
-	                     <i class="ion-ios-add">Add to Cart</i>
-	                 </button>
-	             	</span>
-	          	</div>
-          	</div>
-                  {% endform %}
-          	
-                  
-    			</div>
-    		</div>
-    	</div>
-    </section>
-
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Details</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Specifications</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <h4>Product Description</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut per spici</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis delectus quidem repudiandae veniam distinctio repellendus magni pariatur molestiae asperiores animi, eos quod iusto hic doloremque iste a, nisi iure at unde molestias enim fugit, nulla voluptatibus. Deserunt voluptate tempora aut illum harum, deleniti laborum animi neque, praesentium explicabo, debitis ipsa?</p>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>Small</td>
+                    <td>15 inches</td>
+                  </tr>
+                  <tr>
+                    <td>Medium</td>
+                    <td>17 inches</td>
+                  </tr>
+                  <tr>
+                    <td>Large</td>
+                    <td>20 inches</td>
+                  </tr>
+                  <tr>
+                    <td>X Large</td>
+                    <td>25 inches</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
