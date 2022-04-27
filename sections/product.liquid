@@ -26,6 +26,7 @@
               {{product.description}}
             </p>
             {% form 'product',product, class: 'bg-light py-5 px-5 mb-6' %}
+            {% unless product.has_only_default_variant %}
             <div class="product-category">
               <span>Size:</span>
               <select class="form-control">
@@ -35,6 +36,7 @@
                 <option>XL</option>
               </select>
             </div>
+            {% endunless %}
             <div class="product-category">
               <span>Color:</span>
               <select class="form-control">
@@ -44,6 +46,7 @@
                 <option>Orange</option>
               </select>
             </div>
+            
             <div class="product-quantity">
               <span>Quantity:</span>
               <input min="1" type="number" id="quantity" name="quantity" value="1" />
