@@ -16,21 +16,26 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          <div class="product-info">
-                            <img width="80" src="images/cart/cart-1.jpg" alt="">
-                            <a href="">Sunglass</a>
-                          </div>
-                        </td>
-                        <td>2</td>
-                        <td>$200.00</td>
-                        <td>
-                          <a class="product-remove" href="">Remove</a>
-                        </td>
-                      </tr>
+                        {% for line_item in cart.items %}
+                        <tr>
+                            <td>
+                              <div class="product-info">
+                                <img width="80" src="{{line_item.image | product_img_url: '1920x'}}" alt="">
+                                <a href="{{line_item.url}}">{{line_item.title}}</a>
+                              </div>
+                            </td>
+                            <td>
+                                <input type="number" class="btn btn-default" name="updates[]" value="{{line_item_quantity}}" min="0" pattern="[0-9]">
+                            </td>
+                            <td>$200.00</td>
+                            <td>
+                              <a class="product-remove" href="">Remove</a>
+                            </td>
+                          </tr>
+                        {% endfor %}
                       
-                     
+                    
+                      
                     </tbody>
                   </table>
                   <div class="row justify-content-end cart-total">
