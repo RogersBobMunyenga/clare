@@ -32,9 +32,9 @@
 						  {% for variant in product.variants %}
 						  {% if variant.available %}
 						  <option value="{{ variant.id }}">{{ variant.title }}</option>
-						  <!-- <option value="">Medium</option>
+						   <option value="">Medium</option>
 						  <option value="">Large</option>
-						  <option value="">Extra Large</option> -->
+						  <option value="">Extra Large</option> 
 						  {% endif %}
 						  {% else %}
 						  <option value="{{ variant.id }}" disabled="disabled">{{ variant.title }}</option>
