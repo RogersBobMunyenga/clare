@@ -1,9 +1,10 @@
+
 <script type="text/javascript">
 	window.product = {{product | json}} || {};
 </script>
 
-
 {% include 'product-header' %}
+
 
 
 <section class="single-product">
@@ -59,7 +60,8 @@
                 
               </ul>
             </div>
-            <a href="cart.html" class="btn btn-main">Add To Cart</a>
+			<input type="hidden" id="variant-id" name="id" value="{{product.variants.first.id}}">
+            <input type="submit" value="AddToCart" class="btn btn-main">
             {% endform %}
           </div>
         </div>
