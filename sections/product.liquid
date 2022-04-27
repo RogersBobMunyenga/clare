@@ -1,5 +1,7 @@
 {% include 'product-header' %}
-
+<script type="text/javascript">
+	window.product = {{product | json}} || {};
+</script>
 
 <section class="single-product">
     <div class="container">
