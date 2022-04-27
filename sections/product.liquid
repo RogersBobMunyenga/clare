@@ -11,7 +11,7 @@
     			<div class="col-lg-6 mb-5 ftco-animate">
     				<img src="{{ image.src |  img_url: 'large' }}" class="img-fluid" alt="" id="ProductMainImage">
                     {% for image in product.images %}
-                        <img src="{{ image.src |  img_url: 'medium' }}" class="img-fluid" alt="" id="ProductImage">
+                        <img src="{{ image.src |  img_url: 'medium' }}" class="img-fluid" alt="" >
                     {% endfor %}
                         
                     
