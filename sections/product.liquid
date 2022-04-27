@@ -32,7 +32,7 @@
               <span>{{product_option.name}}</span>
               <select class="form-control" data-index="option{{forloop.index}}">
                 {% for value in product_option.values %}
-                <option value="{{value}}">{{value | escape}}</option>
+                <option value="{{value | escape}} {% if product_option.selectted_value %} selected="selected" {%endif%}">{{value}}</option>
                 {%endfor %}
               </select>
             </div>
