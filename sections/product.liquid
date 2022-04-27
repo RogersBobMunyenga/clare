@@ -18,7 +18,7 @@
     			</div>
     			<div class="col-lg-6 product-details pl-md-5 ftco-animate">
     				<h3>{{ product.title }}</h3>
-    				<p class="price"><span>$120.00</span></p>
+    				<p class="price"><span>{{ product.price | money }}</span></p>
     				<p>{{ product.description }}</p>
     				
 						<div class="row mt-4">
