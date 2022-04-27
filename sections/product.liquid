@@ -21,7 +21,7 @@
     				<p class="price"><span>{{ current_product.price |  money_with_currency }}</span></p>
     				<p>{{ product.description }}</p>
                   
-                  {% form 'product', product,"class": "product-form", id: "AddToCartForm" %}
+                  {% form 'product', product, class: "product-form", id: "AddToCartForm" %}
     				
 						<div class="row mt-4">
 							<div class="col-md-6">
