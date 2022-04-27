@@ -47,8 +47,11 @@
             <div class="product-category">
               <span>Categories:</span>
               <ul>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Soap</a></li>
+				  {% for collection in product.collections %}
+				  <li><a href="collection.url">{{collection.title}}</a></li>
+					  
+				  {% endfor %}
+                
               </ul>
             </div>
             <a href="cart.html" class="btn btn-main">Add To Cart</a>
