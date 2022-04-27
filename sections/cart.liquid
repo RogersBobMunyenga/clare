@@ -29,7 +29,7 @@
                             <td>
                                 <input type="number" class="btn btn-default" name="updates[]" value="{{line_item_quantity}}" min="0" pattern="[0-9]">
                             </td>
-                            <td>$200.00</td>
+                            <td>{{line_item.line_price | money}}</td>
                             <td>
                               <a class="product-remove" href="">Remove</a>
                             </td>
