@@ -10,7 +10,7 @@
           <div class="single-product-images">
             <img class="img-fluid" src="{{image.src | img_url: '1920x' }}" id="ProductMainImage">
             {% for image in product.images %}
-            <div >
+            <div data-thumb="{{image.src | img_url: '1920x' }}" >
               <img class="img-fluid" src="{{image.src | img_url: '1920x' }}">
             </div>
             {% endfor %}
