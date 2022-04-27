@@ -13152,3 +13152,44 @@ template {
   background: black;
   color: #fff;
 }
+    
+    
+    /*=================================================================
+  Tabs
+==================================================================*/
+
+.nav-tabs {
+  border-bottom: 0;
+  margin-bottom: 10px;
+}
+
+.nav-tabs li {
+  margin-right: 5px;
+}
+
+.nav-tabs li .nav-link {
+  border-radius: 0;
+  background: #dedede;
+}
+
+.nav-tabs li .nav-link.active {
+  background-color: #000;
+  border: 1px solid #000;
+  color: #ffffff;
+}
+
+.nav-tabs a {
+  border-radius: 0;
+  background: #f9f9f9;
+}
+
+.nav-tabs a:hover {
+  border: 1px solid transparent;
+  background: #000;
+  color: #fff;
+}
+
+.tab-content {
+  padding: 20px;
+  border: 1px solid #dedede;
+}
