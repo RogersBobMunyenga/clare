@@ -31,7 +31,7 @@
                             </td>
                             <td>{{line_item.line_price | money}}</td>
                             <td>
-                              <a class="product-remove" href="">Remove</a>
+                              <a class="product-remove" href="/cart/change?line={{forloop.index}}&quantity=0" rel="{{line_item.id}}">Remove</a>
                             </td>
                           </tr>
                         {% endfor %}
