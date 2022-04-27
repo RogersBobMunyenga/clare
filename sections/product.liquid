@@ -27,25 +27,18 @@
             </p>
             {% form 'product',product, class: 'bg-light py-5 px-5 mb-6' %}
             {% unless product.has_only_default_variant %}
+            {% for product_options in product.options_with_values %}
             <div class="product-category">
-              <span>Size:</span>
-              <select class="form-control">
-                <option>S</option>
-                <option>M</option>
-                <option>L</option>
-                <option>XL</option>
+              <span>{{product_option.name}}</span>
+              <select class="form-control" data-index="option{{forloop.index}}">
+                {% for value in product_option.values %}
+                <option value="{{value}}">{{value | escape}}</option>
+                {%endfor %}
               </select>
             </div>
+            {% endfor %}
             {% endunless %}
-            <div class="product-category">
-              <span>Color:</span>
-              <select class="form-control">
-                <option>Red</option>
-                <option>Blue</option>
-                <option>Green</option>
-                <option>Orange</option>
-              </select>
-            </div>
+            
             
             <div class="product-quantity">
               <span>Quantity:</span>
