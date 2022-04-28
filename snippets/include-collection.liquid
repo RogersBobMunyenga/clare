@@ -12,7 +12,11 @@
          
          <select name="sorting" id="sort_by" class="form-select form-select-sm mb-4  w-25 ml-3">
           {% for option in collection.sort_options %}
-            <option value="{{option.value}}">{{option.name}}</option>
+             <option value="{{option.value}}" 
+            {% if option.value == collection.sort_by %}
+              selected 
+            {% endif %}>
+            {{option.name}}</option>
           {% endfor %}
          </select>
       </div>
