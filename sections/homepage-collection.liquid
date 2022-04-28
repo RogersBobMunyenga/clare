@@ -20,7 +20,7 @@
                    {% for product in section.settings.collection.products limit: section.settings.product_limit  %}
                     <div class="item">
                         <div class="product">
-                            <a href="#" class="img-prod"><img class="img-fluid lazyload" src="{{ product.featured_image.src  | img_url: '1920x' }}" >
+                            <a href="{{ product.url }}" class="img-prod"><img class="img-fluid lazyload" src="{{ product.featured_image.src  | img_url: '1920x' }}" >
                                 <span class="status">30%</span>
                             </a>
                             <div class="text pt-3 px-3">
