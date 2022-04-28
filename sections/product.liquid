@@ -5,12 +5,9 @@
 
 {% include 'product-header' %}
 
-
-
 <section class="single-product">
     <div class="container">
       
-
       <div class="row pb-5">
         <div class="col-md-5">
           <div class="single-product-images">
@@ -80,7 +77,15 @@
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
               <h4>Product Description</h4>
-              <p>{{section.settings.product.description}}</p>
+              <p>Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, 
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                Sed ut per spici
+              </p>
               
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -111,18 +116,4 @@
     </div>
   </section>
 
-
-  {% schema %}
-  {
-   "name": "Product Details",
-   "settings": [
-     
-      {
-       "type": "richtext",
-        "id": "description",
-          "label": "Product Description",
-         "default": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum ipsum dicta quod, quia doloremque aut deserunt commodi quis. Totam a consequatur beatae nostrum, earum consequuntur? Eveniet consequatur ipsum dicta recusandae.</p>"
-      }
-   ]
-  }
-  {% endschema %}
+  
