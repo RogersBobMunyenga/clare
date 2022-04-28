@@ -7,7 +7,7 @@
   
     <div class="container-fluid">
        <div class="row">
-         <select name="sorting" id="sort_by" class="form-select">
+         <select name="sorting" id="sort_by" class="form-select form-select-lg mb-3">
           {% for option in collection.sort_options %}
             <option value="{{option.value}}">{{option.name}}</option>
           {% endfor %}
