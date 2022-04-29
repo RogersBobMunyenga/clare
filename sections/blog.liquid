@@ -1,12 +1,14 @@
   <section class="ftco-section">
       <div class="container">
+        {% paginate blog.articles by 12%}
         <div class="row d-flex">
+          {% for article in blog.articles %}
           <div class="col-md-4 d-flex ftco-animate">
             <div class="blog-entry align-self-stretch">
               <a href="blog-single.html" class="block-20" style="background-image: url({{ 'image_1.jpg' | asset_url }});">
               </a>
               <div class="text mt-3 d-block pl-md-5">
-                <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                <h3 class="heading mt-3"><a href="{{ article.url }}">Even the all-powerful Pointing has no control about the blind texts</a></h3>
                 <div class="meta mb-3">
                   <div><a href="#">Dec 6, 2018</a></div>
                   <div><a href="#">Admin</a></div>
@@ -20,7 +22,7 @@
               <a href="blog-single.html" class="block-20" style="background-image: url({{ 'image_2.jpg' | asset_url }});">
               </a>
               <div class="text mt-3 d-block pl-md-5">
-                <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                <h3 class="heading mt-3"><a href="{{ article.url }}">Even the all-powerful Pointing has no control about the blind texts</a></h3>
                 <div class="meta mb-3">
                   <div><a href="#">Dec 6, 2018</a></div>
                   <div><a href="#">Admin</a></div>
@@ -34,7 +36,7 @@
               <a href="blog-single.html" class="block-20" style="background-image: url({{ 'image_3.jpg' | asset_url }});">
               </a>
               <div class="text mt-3 d-block pl-md-5">
-                <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                <h3 class="heading mt-3"><a href="{{ article.url }}">Even the all-powerful Pointing has no control about the blind texts</a></h3>
                 <div class="meta mb-3">
                   <div><a href="#">Dec 6, 2018</a></div>
                   <div><a href="#">Admin</a></div>
@@ -48,7 +50,7 @@
               <a href="blog-single.html" class="block-20" style="background-image: url({{ 'image_4.jpg' | asset_url }});">
               </a>
               <div class="text mt-3 d-block d-block pl-md-5">
-                <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                <h3 class="heading mt-3"><a href="{{ article.url }}">Even the all-powerful Pointing has no control about the blind texts</a></h3>
                 <div class="meta mb-3">
                   <div><a href="#">Dec 6, 2018</a></div>
                   <div><a href="#">Admin</a></div>
@@ -85,21 +87,49 @@
               </div>
             </div>
           </div>
+          {% endfor %}
         </div>
+        {% if paginate.pages > 1 %}
         <div class="row mt-5">
           <div class="col text-center">
             <div class="block-27">
               <ul>
-                <li><a href="#">&lt;</a></li>
+                
+                
+                 {% if paginate.previous.is_link %}
+                <li class="page-item"><a class="page-link" href="{{paginate.previous.url}}">{{paginate.previous.title}}</a></li>
+                {% endif %}
+                
+                
+                {% for part in paginate.parts %}
+                  {% if part.is_link %}
+                  <li class="page-item"><a class="page-link" href="{{part.url}}">{{part.title}}</a></li>
+                  {% else %}
+                  <li class="page-item disabled"><a class="page-link" href="{{part.url}}">{{part.title}}</a></li>
+                  {% endif %}
+                {% endfor %}
+                
+                 
+                
+                {% if paginate.next.is_link %}
+                <li class="page-item" ><a class="page-link" href="{{paginate.next.url}}">{{paginate.next.title}}</a></li>
+
+                {% endif %}
+                
+                
+                
+<!--                 <li><a href="#">&lt;</a></li>
                 <li class="active"><span>1</span></li>
                 <li><a href="#">2</a></li>
                 <li><a href="#">3</a></li>
                 <li><a href="#">4</a></li>
                 <li><a href="#">5</a></li>
-                <li><a href="#">&gt;</a></li>
+                <li><a href="#">&gt;</a></li> -->
               </ul>
             </div>
           </div>
         </div>
+        {% endif %}
+         {% endpaginate%}
       </div>
     </section>
