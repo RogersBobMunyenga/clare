@@ -1,15 +1,25 @@
-# Dusk
+# Clare Shopify Theme
 
-A bare-bones, skeleton starter theme for Shopify. To be clear, Dusk is not intended to be a production theme. It doesn't really do anything, and, therefore, brings zero value to merchants in its current state. Dusk is a _starting point_, for you, the developer, with minimal boilerplate and zero opinions.
+Clare is a shopify theme used to create Clare shopify store based on Dawn shopify theme starter. ,
 
-## From Dusk to Dawn
+## Demonstration
+ - ####  Store Link: https://rotshi-demo.myshopify.com/
+- #### Store Password: rotshi
 
-Shopify's [Dawn](https://themes.shopify.com/themes/dawn/styles/default) theme is impressive—_very_ impressive, and robust—but in their own words, Dawn is a **reference** theme for developers. By definition then, it shouldn't be a starting point. It should be a reference point. It is far easier to copy and paste _from_ Dawn _into_ Dusk than it is to try to deconstruct Dawn in its finished state and remove the parts of Dawn that you wish not to use.
 
-If Dawn is the _Pheonix_, Dusk is the _ashes_.
+This is what i learnt while working on this theme:
 
-**FUN FACT:** I considered naming this theme simply "Dust" because that's basically all it is. It's nothing. It's the particles. It's the bare minimum to get the Online Store Editor to load and for something to display on the front end. However, I felt that "Dusk" was better aligned with the "Dawn" name.
+- Designing & Building Shopify Themes from Scratch.
+- Using Bootstrap@5 to Create a Nice User Interface.
+- Using Liquid, SASS, ESNext to Develop the Theme Fashionably.
+- Using Shopify Theme Scripts to Solve Theme Problems Faster.
+- Using Shopify Metafield to Add Extra Information to Other Resources.
+- Using Swiper to Create Beautiful, Touchable, Responsive Sliders.
+- Using CSS Media Queries to Create a Mobile-First and Responsive Design.
+- Using Shopify Theme CLI to Develop and Deploy the Theme.
+- Using PostCSS to Make CSS Code Compatible with Old Browsers.
+- Using CoreJS to Make JavaScript Code Compatible with Old Browsers.
+- Using Webpack Encore to Bundle all SCSS, JavaScript, Font, Image, … Assets.
+- Using Shopify Theme Check, ESlint, Stylelint, Prettier to Follow Theme Best Practices.
 
-## Conclusion
 
-There is a lot we can learn from [Dawn](https://github.com/Shopify/dawn), so keep its code close by and reference it often as you build out Dusk.
